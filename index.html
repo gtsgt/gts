@@ -39,7 +39,7 @@
     }
 
     .logo img {
-      height: 80px; /* Tamaño aumentado */
+      height: 80px;
     }
 
     nav a {
@@ -103,6 +103,83 @@
       background-color: #e0b977;
     }
 
+    .productos {
+      padding: 4rem 2rem;
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
+    }
+
+    .productos h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--dorado);
+    }
+
+    .productos p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .producto {
+      background-color: #1c2e3f;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .producto-info {
+      padding: 1rem;
+    }
+
+    .producto-info h3 {
+      color: var(--dorado);
+      margin-bottom: 0.5rem;
+    }
+
+    .producto-info p {
+      font-size: 0.95rem;
+    }
+
+    .catalogo-btn {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .catalogo-btn a {
+      background-color: #25D366;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .catalogo-btn a:hover {
+      background-color: #1ebd5d;
+    }
+
     @keyframes aparecer {
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
@@ -126,9 +203,10 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Logo Global Tech" />
+      <img src="Logo AC.png" alt="Logo Global Tech" />
     </div>
     <nav>
       <a href="#">Inicio</a>
@@ -140,7 +218,7 @@
     </nav>
   </header>
 
-  <!-- Sección Hero -->
+  <!-- Hero -->
   <section class="hero">
     <div>
       <h1>Tecnología de confianza a tu alcance</h1>
@@ -148,68 +226,64 @@
       <a href="#catalogo" class="btn-cta">Ver catálogo</a>
     </div>
   </section>
+
+  <!-- Catálogo general -->
+  <section class="productos" id="catalogo">
+    <h2>Catálogo general</h2>
+    <p>
+      En Global Tech Solutions contamos con un amplio portafolio de productos tecnológicos. A continuación, te presentamos una muestra general del tipo de productos que ofrecemos.  
+      <br><br>
+      Si deseas cotizar algo puntual o conocer nuestra disponibilidad actual, contáctanos directamente.
+    </p>
+
+    <div class="grid">
+      <div class="producto">
+        <img src="https://via.placeholder.com/400x200?text=Computadoras" alt="Computadoras">
+        <div class="producto-info">
+          <h3>Computadoras</h3>
+          <p>Escritorio, portátiles, ultrabooks, estaciones de trabajo</p>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/400x200?text=Monitores" alt="Monitores">
+        <div class="producto-info">
+          <h3>Monitores</h3>
+          <p>LED, IPS, gaming y profesionales</p>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/400x200?text=Periféricos" alt="Periféricos">
+        <div class="producto-info">
+          <h3>Periféricos</h3>
+          <p>Teclados, mouse, webcams, auriculares, parlantes</p>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/400x200?text=Almacenamiento" alt="Almacenamiento">
+        <div class="producto-info">
+          <h3>Almacenamiento</h3>
+          <p>SSD, HDD, NAS, memorias USB, tarjetas SD</p>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/400x200?text=Redes" alt="Redes">
+        <div class="producto-info">
+          <h3>Redes</h3>
+          <p>Routers, switches, access points, cableado</p>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/400x200?text=Componentes" alt="Componentes">
+        <div class="producto-info">
+          <h3>Componentes</h3>
+          <p>Procesadores, placas madre, fuentes, gabinetes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalogo-btn">
+      <a href="https://wa.me/50259613047" target="_blank">💬 Cotizar vía WhatsApp</a>
+    </div>
+  </section>
 </body>
 </html>
-  <!-- Imagen de banner visual -->
- <img class="banner-img" src="Footer.png" alt="Banner tecnología">
-
-  <!-- Sección de productos -->
-<section class="productos">
-  <h2>Catálogo general</h2>
-  <p style="text-align: center; max-width: 800px; margin: auto; font-size: 1rem; margin-bottom: 2rem;">
-    En Global Tech Solutions contamos con un amplio portafolio de productos tecnológicos. A continuación, te presentamos una muestra general del tipo de productos que ofrecemos.  
-    <br><br>
-    Si deseas cotizar algo puntual o conocer nuestra disponibilidad actual, contáctanos directamente.
-  </p>
-
-  <div class="grid">
-    <div class="producto">
-      <img src="https://via.placeholder.com/400x200?text=Computadoras" alt="Computadoras">
-      <div class="producto-info">
-        <h3>Computadoras</h3>
-        <p>Escritorio, portátiles, ultrabooks, estaciones de trabajo</p>
-      </div>
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/400x200?text=Monitores" alt="Monitores">
-      <div class="producto-info">
-        <h3>Monitores</h3>
-        <p>Diversos tamaños y tecnologías: LED, IPS, gaming y profesionales</p>
-      </div>
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/400x200?text=Periféricos" alt="Periféricos">
-      <div class="producto-info">
-        <h3>Periféricos</h3>
-        <p>Teclados, mouse, webcams, auriculares, parlantes</p>
-      </div>
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/400x200?text=Almacenamiento" alt="Almacenamiento">
-      <div class="producto-info">
-        <h3>Almacenamiento</h3>
-        <p>Discos SSD, HDD, NAS, memorias USB y tarjetas SD</p>
-      </div>
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/400x200?text=Redes" alt="Redes">
-      <div class="producto-info">
-        <h3>Equipos de red</h3>
-        <p>Routers, switches, access points, cableado estructurado</p>
-      </div>
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/400x200?text=Componentes" alt="Componentes">
-      <div class="producto-info">
-        <h3>Componentes</h3>
-        <p>Procesadores, placas madre, fuentes, gabinetes y más</p>
-      </div>
-    </div>
-  </div>
-
-  <div style="text-align: center; margin-top: 3rem;">
-    <a href="https://wa.me/50259613047" target="_blank" style="background-color: #25D366; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem;">
-      💬 Cotizar vía WhatsApp
-    </a>
-  </div>
-</section>
