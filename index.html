@@ -28,24 +28,43 @@
   color: var(--blanco);
 }
 header {
-  background: url('fondo-header.png') no-repeat center center / cover;
-  height: 120px;
+  background: rgba(255, 255, 255, 0.85); /* blanco translúcido */
+  backdrop-filter: blur(8px); /* efecto glass */
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0 2rem;
+  padding: 0.8rem 2rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
 }
 
+.logo-texto {
+  display: flex;
+  align-items: center;
+}
+
+.logo-texto img {
+  height: 80px;
+  margin-right: 12px;
+}
+
+.logo-texto span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #112331;
+}
+
 nav a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: white;
+  color: #074470;
   font-weight: 600;
   font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -205,6 +224,10 @@ nav a:hover {
 <body>
   <!-- Header -->
 <header>
+  <div class="logo-texto">
+    <img src="Logo Oficial.png" alt="Logo Global Tech" />
+    <span>Global Tech Solutions</span>
+  </div>
   <nav>
     <a href="#">Inicio</a>
     <a href="#nosotros">Nosotros</a>
@@ -215,7 +238,6 @@ nav a:hover {
     </a>
   </nav>
 </header>
-
 
   <!-- Hero -->
   <section class="hero">
