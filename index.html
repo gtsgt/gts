@@ -2,9 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Global Tech Solutions</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -23,183 +22,134 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      color: var(--azul-oscuro);
-      background-color: var(--blanco);
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
     }
 
     header {
-      background-color: var(--blanco);
+      background-color: var(--azul-oscuro);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      border-bottom: 1px solid #e5e5e5;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 10;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
     .logo img {
-      height: 40px;
-      margin-right: 10px;
+      height: 80px; /* Tamaño aumentado */
     }
 
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
-      color: var(--azul-principal);
+      color: var(--blanco);
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
 
     nav a:hover {
       color: var(--dorado);
     }
 
+    .whatsapp-icon {
+      height: 26px;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
     .hero {
-      margin-top: 80px;
+      margin-top: 90px;
+      height: 90vh;
+      background: linear-gradient(to bottom right, rgba(7, 68, 112, 0.7), rgba(17, 35, 49, 0.85)),
+        url('fondo-hero.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 5rem 1rem;
-      background: linear-gradient(135deg, var(--azul-principal), var(--azul-oscuro));
-      color: var(--blanco);
+      border-radius: 24px;
+      margin: 1rem 1rem 2rem 1rem;
+      animation: aparecer 1.5s ease-in-out;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       margin-bottom: 1rem;
+      animation: fadeInDown 1.2s ease;
     }
 
     .hero p {
       font-size: 1.2rem;
       color: var(--dorado);
+      animation: fadeInUp 1.4s ease;
     }
 
-    .banner-img {
-      width: 100%;
-      display: block;
-    }
-
-    .productos {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .productos h2 {
-      font-size: 2rem;
+    .btn-cta {
+      display: inline-block;
+      background-color: var(--dorado);
       color: var(--azul-oscuro);
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .producto {
-      border: 1px solid #eee;
+      padding: 0.9rem 1.8rem;
       border-radius: 10px;
-      overflow: hidden;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-
-    .producto:hover {
-      transform: translateY(-5px);
-    }
-
-    .producto img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .producto-info {
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .producto-info h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .producto-info p {
-      color: var(--dorado);
+      text-decoration: none;
       font-weight: bold;
+      margin-top: 2rem;
+      transition: background 0.3s;
+      animation: fadeIn 2s ease;
+    }
+
+    .btn-cta:hover {
+      background-color: #e0b977;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Global Tech Logo" />
-      <span><strong>Global Tech Solutions</strong></span>
+      <img src="logo.png" alt="Logo Global Tech" />
     </div>
     <nav>
       <a href="#">Inicio</a>
-      <a href="#">Productos</a>
-      <a href="#">Nosotros</a>
-      <a href="#">Contacto</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/50259613047" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon" />
+      </a>
     </nav>
   </header>
 
- <section class="hero-nueva">
-  <div class="contenido-hero">
-    <h1>Innovación y tecnología que potencian tu día a día</h1>
-    <p>Tecnología de confianza para empresas, oficinas y hogares.</p>
-    <a href="#catalogo" class="btn-cta">Ver catálogo</a>
-  </div>
-</section>
-
-<style>
-  .hero-nueva {
-    height: 90vh;
-    background: linear-gradient(to bottom, rgba(7, 68, 112, 0.85), rgba(17, 35, 49, 0.85)),
-      url('https://images.unsplash.com/photo-1581091012184-7f08041f1cfd?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 2rem;
-  }
-
-  .contenido-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .contenido-hero p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: #cda661;
-  }
-
-  .btn-cta {
-    background-color: #cda661;
-    color: #112331;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
-
-  .btn-cta:hover {
-    background-color: #d9b477;
-  }
-</style>
-
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div>
+      <h1>Tecnología de confianza a tu alcance</h1>
+      <p>Soluciones que se adaptan a tu empresa, hogar u oficina.</p>
+      <a href="#catalogo" class="btn-cta">Ver catálogo</a>
+    </div>
+  </section>
+</body>
+</html>
   <!-- Imagen de banner visual -->
  <img class="banner-img" src="Footer.png" alt="Banner tecnología">
 
