@@ -282,7 +282,7 @@
   <section class="hero">
     <div>
       <h1>Tecnología de confianza a tu alcance</h1>
-      <a href="#catalogo" class="btn-cta" onclick="scrollSuave('#catalogo')">Ver catálogo</a>
+      <a href="#catalogo" class="btn-cta">Ver catálogo</a>
     </div>
   </section>
 
@@ -293,7 +293,48 @@
       En Global Tech Solutions contamos con un amplio portafolio de productos tecnológicos. A continuación, te presentamos una muestra general del tipo de productos que ofrecemos. Si deseas cotizar algo puntual o conocer nuestra disponibilidad actual, contáctanos directamente.
     </p>
     <div class="grid">
-      <!-- Productos aquí -->
+      <div class="producto">
+    <img src="https://via.placeholder.com/400x200?text=Computadoras" alt="Computadoras">
+    <div class="producto-info">
+      <h3>Computadoras</h3>
+      <p>Escritorio, portátiles, ultrabooks, estaciones de trabajo</p>
+    </div>
+  </div>
+  <div class="producto">
+    <img src="https://via.placeholder.com/400x200?text=Monitores" alt="Monitores">
+    <div class="producto-info">
+      <h3>Monitores</h3>
+      <p>LED, IPS, gaming y profesionales</p>
+    </div>
+  </div>
+  <div class="producto">
+    <img src="https://via.placeholder.com/400x200?text=Periféricos" alt="Periféricos">
+    <div class="producto-info">
+      <h3>Periféricos</h3>
+      <p>Teclados, mouse, webcams, auriculares, parlantes</p>
+    </div>
+  </div>
+  <div class="producto">
+    <img src="https://via.placeholder.com/400x200?text=Almacenamiento" alt="Almacenamiento">
+    <div class="producto-info">
+      <h3>Almacenamiento</h3>
+      <p>SSD, HDD, NAS, memorias USB, tarjetas SD</p>
+    </div>
+  </div>
+  <div class="producto">
+    <img src="https://via.placeholder.com/400x200?text=Redes" alt="Redes">
+    <div class="producto-info">
+      <h3>Redes</h3>
+      <p>Routers, switches, access points, cableado</p>
+    </div>
+  </div>
+  <div class="producto">
+    <img src="https://via.placeholder.com/400x200?text=Componentes" alt="Componentes">
+    <div class="producto-info">
+      <h3>Componentes</h3>
+      <p>Procesadores, placas madre, fuentes, gabinetes</p>
+    </div>
+  </div>
     </div>
     <div class="catalogo-btn">
       <a href="https://wa.me/50259613047" target="_blank">💬 Cotizar vía WhatsApp</a>
@@ -354,5 +395,16 @@
       });
     });
   </script>
+  <script>
+  document.querySelectorAll('a[href^="#"]').forEach(ancla => {
+    ancla.addEventListener('click', function (e) {
+      e.preventDefault();
+      const destino = document.querySelector(this.getAttribute('href'));
+      if (destino) {
+        destino.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
 </body>
 </html>
