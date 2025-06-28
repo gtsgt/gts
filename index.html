@@ -179,22 +179,18 @@
       background-color: #1ebd5d;
     }
 
-    .banner {
-      width: 50%;
-      height: 50px;
-      margin: 4rem auto 2rem auto;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
+   .banner {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
 
-    .banner img {
-      width: 50%;
-      height: 50%;
-      object-fit: cover;
-      display: block;
-    }
-
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
     @keyframes aparecer {
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }
