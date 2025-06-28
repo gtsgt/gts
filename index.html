@@ -257,6 +257,26 @@
 .footer-social img:hover {
   transform: scale(1.2);
 }
+    .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
   </style>
 </head>
 <body>
@@ -406,5 +426,8 @@
     });
   });
 </script>
+  <a href="https://wa.me/50259613047" class="whatsapp-float" target="_blank" title="¿Necesitas ayuda? Chatea con nosotros">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
 </body>
 </html>
