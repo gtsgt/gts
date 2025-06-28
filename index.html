@@ -4,44 +4,89 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Global Tech Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+    :root {
+      --azul-principal: #074470;
+      --azul-oscuro: #112331;
+      --dorado: #cda661;
+      --blanco: #ffffff;
+      --negro: #000000;
     }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--azul-oscuro);
+      background-color: var(--blanco);
+    }
+
     header {
-      background-color: #112331;
-      color: white;
-      padding: 1rem 2rem;
+      background-color: var(--blanco);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #e5e5e5;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1rem;
-    }
-    .hero {
-      background: url('https://nomadgoods.com/cdn/shop/files/NOMAD_HomepageHero_May24_v2_1440x.jpg?v=1716486742') no-repeat center center;
-      background-size: cover;
-      height: 80vh;
+
+    .logo {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
     }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--azul-principal);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--dorado);
+    }
+
+    .hero {
+      margin-top: 80px;
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, var(--azul-principal), var(--azul-oscuro));
+      color: var(--blanco);
+    }
+
     .hero h1 {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 2rem;
-      border-radius: 10px;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--dorado);
     }
   </style>
 </head>
 <body>
   <header>
-    <div><strong>Global Tech Solutions</strong></div>
+    <div class="logo">
+      <img src="logo.png" alt="Global Tech Logo" />
+      <span><strong>Global Tech Solutions</strong></span>
+    </div>
     <nav>
       <a href="#">Inicio</a>
       <a href="#">Productos</a>
@@ -51,7 +96,8 @@
   </header>
 
   <section class="hero">
-    <h1>Tecnología de confianza a tu alcance </h1>
+    <h1>Global Tech Solutions</h1>
+    <p>Tecnología de confianza a tu alcance</p>
   </section>
 </body>
 </html>
