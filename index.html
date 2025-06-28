@@ -79,6 +79,64 @@
       font-size: 1.2rem;
       color: var(--dorado);
     }
+
+    .banner-img {
+      width: 100%;
+      display: block;
+    }
+
+    .productos {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .productos h2 {
+      font-size: 2rem;
+      color: var(--azul-oscuro);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .producto {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .producto-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .producto-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .producto-info p {
+      color: var(--dorado);
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -98,6 +156,37 @@
   <section class="hero">
     <h1>Global Tech Solutions</h1>
     <p>Tecnología de confianza a tu alcance</p>
+  </section>
+
+  <!-- Imagen de banner visual -->
+  <img class="banner-img" src="https://nomadgoods.com/cdn/shop/files/NOMAD_HomepageHero_May24_v2_1440x.jpg?v=1716486742" alt="Banner tecnología" />
+
+  <!-- Sección de productos -->
+  <section class="productos">
+    <h2>Productos destacados</h2>
+    <div class="grid">
+      <div class="producto">
+        <img src="https://via.placeholder.com/400x200?text=Laptop+Premium" alt="Laptop Premium">
+        <div class="producto-info">
+          <h3>Laptop Premium</h3>
+          <p>Q8,999</p>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/400x200?text=Monitor+UltraWide" alt="Monitor UltraWide">
+        <div class="producto-info">
+          <h3>Monitor UltraWide</h3>
+          <p>Q3,250</p>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/400x200?text=Kit+Home+Office" alt="Kit Home Office">
+        <div class="producto-info">
+          <h3>Kit Home Office</h3>
+          <p>Q2,199</p>
+        </div>
+      </div>
+    </div>
   </section>
 </body>
 </html>
