@@ -82,20 +82,21 @@
         padding: 1rem;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       }
-
+       nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
       nav a {
         margin: 0.5rem 0;
         color: #112331;
         font-size: 1rem;
       }
 
-      .menu-toggle {
-        display: block;
-      }
 
-      nav.active {
-        display: flex;
-      }
+
+     
     }
 
     .hero {
