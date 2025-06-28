@@ -1,377 +1,36 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Global Tech Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --azul-principal: #074470;
-      --azul-oscuro: #112331;
-      --azul-darker: #0e1e2d;
-      --dorado: #cda661;
-      --blanco: #ffffff;
-      --negro: #000000;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-  background: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(17, 35, 49, 0.85)),
-    url('fondo-pagina.jpg') no-repeat center center / cover;
-  color: var(--blanco);
-}
-header {
-  background: rgba(255, 255, 255, 0.85); /* blanco translúcido */
-  backdrop-filter: blur(8px); /* efecto glass */
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 2rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.logo-texto {
-  display: flex;
-  align-items: center;
-}
-
-.logo-texto img {
-  height: 80px;
-  margin-right: 12px;
-}
-
-.logo-texto span {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #112331;
-}
-
-nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #074470;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #cda661;
-}
-
-.whatsapp-icon {
-  height: 26px;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
-    .hero {
-      margin-top: 120px;
-      height: 60vh;
-      background: linear-gradient(to bottom right, rgba(7, 68, 112, 0.7), rgba(17, 35, 49, 0.85)),
-        url('fondo-hero.jpg') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      border-radius: 24px;
-      margin: 1rem 1rem 2rem 1rem;
-      animation: aparecer 1.5s ease-in-out;
-    }
-
-    .hero h1 {
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
-      animation: fadeInDown 1.2s ease;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--dorado);
-      animation: fadeInUp 1.4s ease;
-    }
-
-    .btn-cta {
-      display: inline-block;
-      background-color: var(--dorado);
-      color: var(--azul-oscuro);
-      padding: 0.9rem 1.8rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 2rem;
-      transition: background 0.3s;
-      animation: fadeIn 2s ease;
-    }
-
-    .btn-cta:hover {
-      background-color: #e0b977;
-    }
-
-    .productos {
-      padding: 4rem 2rem;
-    }
-
-    .productos h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: var(--dorado);
-    }
-
-    .productos p {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 2rem auto;
-      font-size: 1rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .producto {
-      background-color: #1c2e3f;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-
-    .producto:hover {
-      transform: translateY(-5px);
-    }
-
-    .producto img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .producto-info {
-      padding: 1rem;
-    }
-
-    .producto-info h3 {
-      color: var(--dorado);
-      margin-bottom: 0.5rem;
-    }
-
-    .producto-info p {
-      font-size: 0.95rem;
-    }
-
-    .catalogo-btn {
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .catalogo-btn a {
-      background-color: #25D366;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    .catalogo-btn a:hover {
-      background-color: #1ebd5d;
-    }
-    main {
-  padding-top: 140px; /* ajusta según el alto real de tu header */
-}
-    .hero {
-  padding-top: 140px;
-}
-
- .banner {
-  width: 100%;
-  max-width: 1200px;
-  margin: 4rem auto 2rem auto;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  background: rgba(255, 255, 255, 0.75); /* fondo blanco semitransparente */
-  backdrop-filter: blur(12px);           /* difuminado */
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-  mix-blend-mode: multiply; /* suaviza la imagen sobre el fondo translúcido */
-  opacity: 0.9;              /* leve opacidad para armonizar con el fondo */
-}
-    @keyframes aparecer {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    footer {
-  background-color: #0e1e2d;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-}
-
-footer {
-  background-color: #112331;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-}
-
-.footer-links {
-  margin-top: 1rem;
-}
-
-.footer-links a {
-  color: #cda661;
-  margin: 0 10px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.footer-links img {
-  height: 22px;
-  vertical-align: middle;
-}
-   .menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #074470;
-}
-
-@media screen and (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.95);
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-    color: #112331;
-    font-size: 1rem;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-
-  .logo-texto {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .banner {
-    margin-top: 6rem;
-    border-radius: 0;
-  }
-.footer-social {
-  margin-top: 1rem;
-}
-
-.footer-social a {
-  display: inline-block;
-  margin: 0 8px;
-}
-
-.footer-social img {
-  width: 26px;
-  height: 26px;
-  filter: brightness(0) invert(1); /* que se vean blancos sobre fondo oscuro */
-  transition: transform 0.2s ease;
-}
-
-.footer-social img:hover {
-  transform: scale(1.2);
-}
-  .footer-links a {
-    display: block;
-    margin: 8px 0;
-  }
-}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Header -->
-<header>
-  <div class="logo-texto">
-    <img src="logo.png" alt="Logo Global Tech" />
-    <span>Global Tech Solutions</span>
-  </div>
-
-  <!-- Ícono de menú móvil -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <nav id="nav-menu">
-    <a href="#">Inicio</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#catalogo">Catálogo</a>
-    <a href="#contacto">Contacto</a>
-    <a href="https://wa.me/50259613047" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon" />
-    </a>
-  </nav>
-</header>
+  <!-- Header global -->
+  <header>
+    <div class="logo-texto">
+      <img src="Logo Oficial.png" alt="Logo Global Tech" />
+      <span>Global Tech Solutions</span>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav-menu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://wa.me/50259613047" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon" />
+      </a>
+    </nav>
+  </header>
 
   <!-- Hero -->
   <section class="hero">
     <div>
       <h1>Tecnología de confianza a tu alcance</h1>
-      <p>
-        En <strong>Global Tech Solutions</strong> nos dedicamos a ofrecer soluciones tecnológicas de calidad para empresas, hogares y oficinas. Contamos con un equipo profesional y una amplia gama de productos y servicios que se adaptan a tus necesidades.
-       </p>
-      <a href="#catalogo" class="btn-cta">Ver catálogo</a>
+      <a href="#catalogo" class="btn-cta" onclick="scrollSuave('#catalogo')">Ver catálogo</a>
     </div>
   </section>
 
@@ -379,97 +38,69 @@ footer {
   <section class="productos" id="catalogo">
     <h2>Catálogo general</h2>
     <p>
-      En Global Tech Solutions contamos con un amplio portafolio de productos tecnológicos. A continuación, te presentamos una muestra general del tipo de productos que ofrecemos.  
-      <br><br>
-      Si deseas cotizar algo puntual o conocer nuestra disponibilidad actual, contáctanos directamente.
+      En Global Tech Solutions contamos con un amplio portafolio de productos tecnológicos. A continuación, te presentamos una muestra general del tipo de productos que ofrecemos. Si deseas cotizar algo puntual o conocer nuestra disponibilidad actual, contáctanos directamente.
     </p>
-
     <div class="grid">
-      <div class="producto">
-        <img src="Logo AC.png" alt="Computadoras">
-        <div class="producto-info">
-          <h3>Computadoras</h3>
-          <p>Escritorio, portátiles, ultrabooks, estaciones de trabajo</p>
-        </div>
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/400x200?text=Monitores" alt="Monitores">
-        <div class="producto-info">
-          <h3>Monitores</h3>
-          <p>LED, IPS, gaming y profesionales</p>
-        </div>
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/400x200?text=Periféricos" alt="Periféricos">
-        <div class="producto-info">
-          <h3>Periféricos</h3>
-          <p>Teclados, mouse, webcams, auriculares, parlantes</p>
-        </div>
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/400x200?text=Almacenamiento" alt="Almacenamiento">
-        <div class="producto-info">
-          <h3>Almacenamiento</h3>
-          <p>SSD, HDD, NAS, memorias USB, tarjetas SD</p>
-        </div>
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/400x200?text=Redes" alt="Redes">
-        <div class="producto-info">
-          <h3>Redes</h3>
-          <p>Routers, switches, access points, cableado</p>
-        </div>
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/400x200?text=Componentes" alt="Componentes">
-        <div class="producto-info">
-          <h3>Componentes</h3>
-          <p>Procesadores, placas madre, fuentes, gabinetes</p>
-        </div>
-      </div>
+      <!-- Productos aquí -->
     </div>
-
     <div class="catalogo-btn">
       <a href="https://wa.me/50259613047" target="_blank">💬 Cotizar vía WhatsApp</a>
+    </div>
+    <div class="catalogo-btn">
+      <a href="catalogo.html">📘 Catálogo Amplio</a>
     </div>
   </section>
 
   <!-- Banner final -->
-    <div class="banner">
-  <img src="Banner.png" alt="Banner Global Tech" />
-</div>
-  <!-- Footer de Pagina -->
-<footer>
-  <div class="footer-content">
-    <p>&copy; 2025 Global Tech Solutions</p>
-
-    <div class="footer-links">
-      <a href="#nosotros">Nosotros</a>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-
-    <div class="footer-social">
-      <a href="https://www.instagram.com/gts_guatemala" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
-      </a>
-      <a href="https://www.facebook.com/globaltechsolutionsgt" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook" />
-      </a>
-      <a href="https://www.linkedin.com/company/global-tech-solutions-gt/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn" />
-      </a>
-      <a href="https://wa.me/50259613047" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
-    </div>
+  <div class="banner">
+    <img src="Banner.png" alt="Banner Global Tech" />
   </div>
-</footer>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Global Tech Solutions</p>
+      <div class="footer-links">
+        <a href="nosotros.html">Nosotros</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gts_guatemala" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/globaltechsolutionsgt" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook" />
+        </a>
+        <a href="https://www.linkedin.com/company/global-tech-solutions-gt/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn" />
+        </a>
+        <a href="https://wa.me/50259613047" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
   <script>
-  function toggleMenu() {
-    const menu = document.getElementById("nav-menu");
-    menu.classList.toggle("active");
-  }
-</script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-menu");
+      menu.classList.toggle("active");
+    }
+
+    function scrollSuave(seccion) {
+      const destino = document.querySelector(seccion);
+      if (destino) destino.scrollIntoView({ behavior: "smooth" });
+      const menu = document.getElementById("nav-menu");
+      menu.classList.remove("active");
+    }
+
+    document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function () {
+        const menu = document.getElementById("nav-menu");
+        menu.classList.remove("active");
+      });
+    });
+  </script>
 </body>
 </html>
