@@ -1,246 +1,232 @@
-<style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: 
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(17, 35, 49, 0.85)),
-        url('fondo-pagina.jpg') no-repeat center center / cover;
-      color: white;
-    }
+/* Body y tipografía */
+body {
+  font-family: 'Inter', sans-serif;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(17, 35, 49, 0.85)),
+    url('fondo-pagina.jpg') no-repeat center center / cover;
+  color: white;
+}
 
-    header {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 2rem;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-    }
+/* Header */
+header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
 
-    .logo-texto {
-      display: flex;
-      align-items: center;
-    }
+/* Logo y texto */
+.logo-texto {
+  display: flex;
+  align-items: center;
+}
 
-    .logo-texto img {
-      height: 80px;
-      margin-right: 12px;
-    }
+.logo-texto img {
+  height: 80px;
+  margin-right: 12px;
+}
 
-    .logo-texto span {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #112331;
-    }
+.logo-texto span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #112331;
+}
 
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #074470;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
+/* Navegación escritorio */
+nav {
+  display: flex;
+}
 
-    nav a:hover {
-      color: #cda661;
-    }
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #074470;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
 
-    .whatsapp-icon {
-      height: 24px;
-      vertical-align: middle;
-      margin-left: 10px;
-    }
+nav a:hover {
+  color: #cda661;
+}
 
-    .menu-toggle {
-      display: none;
-      font-size: 2rem;
-      cursor: pointer;
-      color: #074470;
-    }
+.whatsapp-icon {
+  height: 24px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
 
-    @media screen and (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.95);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        padding: 1rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      }
-       nav.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      nav a {
-        margin: 0.5rem 0;
-        color: #112331;
-        font-size: 1rem;
-      }
+/* Menú hamburguesa oculto por defecto */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #074470;
+}
 
+/* Hero */
+.hero {
+  margin-top: 120px;
+  height: 60vh;
+  background: linear-gradient(to bottom right, rgba(7, 68, 112, 0.7), rgba(17, 35, 49, 0.85)),
+    url('fondo-hero.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 24px;
+  margin: 1rem;
+}
 
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
 
-     
-    }
+.btn-cta {
+  display: inline-block;
+  background-color: #cda661;
+  color: #112331;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 2rem;
+}
 
-    .hero {
-      margin-top: 120px;
-      height: 60vh;
-      background: linear-gradient(to bottom right, rgba(7, 68, 112, 0.7), rgba(17, 35, 49, 0.85)),
-        url('fondo-hero.jpg') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      border-radius: 24px;
-      margin: 1rem;
-    }
+/* Productos */
+.productos {
+  padding: 4rem 2rem;
+}
 
-    .hero h1 {
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
-      color: #ffffff;
-    }
+.productos h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #cda661;
+}
 
-    .btn-cta {
-      display: inline-block;
-      background-color: #cda661;
-      color: #112331;
-      padding: 0.9rem 1.8rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 2rem;
-    }
+.productos p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  font-size: 1rem;
+}
 
-    .productos {
-      padding: 4rem 2rem;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
-    .productos h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #cda661;
-    }
+.producto {
+  background-color: #1c2e3f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    .productos p {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 2rem auto;
-      font-size: 1rem;
-    }
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
+.producto-info {
+  padding: 1rem;
+}
 
-    .producto {
-      background-color: #1c2e3f;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+.producto-info h3 {
+  color: #cda661;
+  margin-bottom: 0.5rem;
+}
 
-    .producto img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+/* Botón catálogo */
+.catalogo-btn {
+  text-align: center;
+  margin-top: 3rem;
+}
 
-    .producto-info {
-      padding: 1rem;
-    }
+.catalogo-btn a {
+  background-color: #25D366;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
 
-    .producto-info h3 {
-      color: #cda661;
-      margin-bottom: 0.5rem;
-    }
+.catalogo-btn a:hover {
+  background-color: #1ebd5d;
+}
 
-    .catalogo-btn {
-      text-align: center;
-      margin-top: 3rem;
-    }
+/* Banner */
+.banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto 2rem auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
 
-    .catalogo-btn a {
-      background-color: #25D366;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-    }
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
 
-    .catalogo-btn a:hover {
-      background-color: #1ebd5d;
-    }
+/* Footer */
+footer {
+  background-color: #112331;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
 
-    .banner {
-      width: 100%;
-      max-width: 1200px;
-      margin: 4rem auto 2rem auto;
-      border-radius: 20px;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    }
+.footer-links {
+  margin-top: 1rem;
+}
 
-    .banner img {
-      width: 100%;
-      height: auto;
-      display: block;
-      mix-blend-mode: multiply;
-      opacity: 0.9;
-    }
+.footer-links a {
+  color: #cda661;
+  margin: 0 10px;
+  text-decoration: none;
+}
 
-    footer {
-      background-color: #112331;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-    }
+.footer-social {
+  margin-top: 1rem;
+}
 
-    .footer-links {
-      margin-top: 1rem;
-    }
+.footer-social a {
+  display: inline-block;
+  margin: 0 8px;
+}
 
-    .footer-links a {
-      color: #cda661;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    .footer-social {
-      margin-top: 1rem;
-    }
-
-    .footer-social a {
-      display: inline-block;
-      margin: 0 8px;
-    }
 .footer-social img {
   width: 24px;
   height: 24px;
@@ -250,7 +236,9 @@
 .footer-social img:hover {
   transform: scale(1.2);
 }
-    .whatsapp-float {
+
+/* Botón flotante WhatsApp */
+.whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -270,4 +258,29 @@
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
-  </style>
+
+/* Responsive Menú */
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  nav.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  nav a {
+    margin: 0.5rem 0;
+    color: #112331;
+    font-size: 1rem;
+  }
+}
