@@ -40,7 +40,7 @@
     }
 
     .logo img {
-      height: 160px; /* Doble de tamaño */
+      height: 100px;
     }
 
     nav a {
@@ -61,8 +61,8 @@
       margin-left: 10px;
     }
 
-   
     .hero {
+      margin-top: 120px;
       height: 90vh;
       background: linear-gradient(to bottom right, rgba(7, 68, 112, 0.7), rgba(17, 35, 49, 0.85)),
         url('fondo-hero.jpg') no-repeat center center/cover;
@@ -178,17 +178,22 @@
     .catalogo-btn a:hover {
       background-color: #1ebd5d;
     }
-     /* 🖼 Banner debajo del header */
+
     .banner {
-      margin-top: 160px;
       width: 100%;
       height: 400px;
-      background: url('Footer.png') no-repeat center center/cover;
+      margin: 4rem auto 2rem auto;
       border-radius: 16px;
-      margin-bottom: 2rem;
+      overflow: hidden;
       box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
 
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     @keyframes aparecer {
       from { opacity: 0; transform: scale(0.95); }
@@ -216,7 +221,7 @@
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="Logo AC.png" alt="Logo Global Tech" />
+      <img src="logo.png" alt="Logo Global Tech" />
     </div>
     <nav>
       <a href="#">Inicio</a>
@@ -227,9 +232,6 @@
       </a>
     </nav>
   </header>
-
-  <!-- Banner -->
-  <div class="banner"></div>
 
   <!-- Hero -->
   <section class="hero">
@@ -298,5 +300,10 @@
       <a href="https://wa.me/50259613047" target="_blank">💬 Cotizar vía WhatsApp</a>
     </div>
   </section>
+
+  <!-- Banner final -->
+  <div class="banner">
+    <img src="banner.jpg" alt="Banner visual final" />
+  </div>
 </body>
 </html>
