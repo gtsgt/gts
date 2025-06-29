@@ -322,98 +322,79 @@ footer {
 .nosotros-galeria img:hover {
   transform: scale(1.03);
 }
-/* Contacto */
+/* Formulario de contacto */
 .contacto-container {
   max-width: 600px;
-  margin: 140px auto 3rem auto;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 2.5rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  text-align: center;
+  margin: 140px auto 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: #112331;
 }
 
 .contacto-container h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #cda661;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .contacto-container p {
+  text-align: center;
   margin-bottom: 2rem;
-  font-size: 1rem;
-  color: #ddd;
 }
 
-.contacto-form {
+.contacto-container form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
 }
 
-.contacto-form .campo {
-  width: 100%;
+.contacto-container label {
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 600;
 }
 
-.contacto-form input,
-.contacto-form textarea {
-  width: 100%;
-  padding: 0.9rem;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
+.contacto-container input,
+.contacto-container textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 1rem;
-  color: #fff;
 }
 
-.contacto-form input::placeholder,
-.contacto-form textarea::placeholder {
-  color: #ccc;
-}
-
-.contacto-form input:focus,
-.contacto-form textarea:focus {
-  outline: none;
-  border-color: #cda661;
-  background: rgba(255,255,255,0.15);
-}
-
-.contacto-form button {
-  background-color: #cda661;
+.contacto-container button {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  background: #cda661;
   color: #112331;
-  font-weight: bold;
   border: none;
-  padding: 1rem;
   border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
-  font-size: 1rem;
 }
 
-.contacto-form button:hover {
-  background-color: #e0b977;
+.contacto-container button:hover {
+  background: #e0b977;
 }
 
 .contacto-whatsapp {
+  text-align: center;
   margin-top: 2rem;
 }
 
 .contacto-whatsapp a {
-  display: inline-block;
-  background-color: #25d366;
+  background-color: #25D366;
   color: white;
-  padding: 0.9rem 1.5rem;
+  padding: 0.9rem 1.8rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
 }
 
 .contacto-whatsapp a:hover {
   background-color: #1ebd5d;
 }
-
 /* Página de Gracias */
 .gracias-container {
   max-width: 600px;
