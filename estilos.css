@@ -258,6 +258,32 @@ footer {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+/* Configuracion de Marcas - Nosotros -- */
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.2rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.marca {
+  text-align: center;
+}
+
+.marca img {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+}
+
+.marca span {
+  display: block;
+  font-size: 0.85rem;
+  color: #ffffff;
+}
 
 /* Responsive Menú compatible con Opera, Firefox, Safari y Chrome */
 @media screen and (max-width: 768px) {
@@ -285,29 +311,4 @@ footer {
     font-size: 1rem;
   }
 }
-/* Configuracion de Marcas - Nosotros -- */
-.marcas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1.2rem;
-  justify-items: center;
-  align-items: center;
-  margin-top: 2rem;
-}
 
-.marca {
-  text-align: center;
-}
-
-.marca img {
-  max-width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto 0.5rem auto;
-}
-
-.marca span {
-  display: block;
-  font-size: 0.85rem;
-  color: #ffffff;
-}
