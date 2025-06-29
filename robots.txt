@@ -1,0 +1,19 @@
+User-agent: *
+# Permitir acceso a todo el sitio
+Allow: /
+
+# Bloquear página de agradecimiento
+Disallow: /gracias.html
+
+# Bloquear archivos temporales (por si algún día los subes)
+Disallow: /*.zip$
+Disallow: /*.tar$
+Disallow: /*.gz$
+
+# Bloquear carpetas privadas (si existieran)
+Disallow: /privado/
+Disallow: /tmp/
+Disallow: /backup/
+
+# Indicar sitemap
+Sitemap: https://www.gts.com.gt/sitemap.xml
