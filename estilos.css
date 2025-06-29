@@ -143,10 +143,11 @@ nav a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.producto img {
+.producto .swiper-slide img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 .producto-info {
@@ -157,12 +158,7 @@ nav a:hover {
   color: #cda661;
   margin-bottom: 0.5rem;
 }
-.producto .swiper-slide img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 4px;
-}
+
 /* Botón catálogo */
 .catalogo-btn {
   text-align: center;
@@ -180,7 +176,7 @@ nav a:hover {
 }
 
 .catalogo-btn a:hover {
-  background-color: #1ebd5d;
+  background-color: #e0b977;
 }
 
 /* Banner */
@@ -263,7 +259,8 @@ footer {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
-/* Configuracion de Marcas - Nosotros -- */
+
+/* Marcas Nosotros */
 .marcas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -305,14 +302,14 @@ footer {
   margin-top: 0.3rem;
 }
 
-/* Responsive Menú compatible con Opera, Firefox, Safari y Chrome */
+/* Menú responsive */
 @media screen and (max-width: 768px) {
   nav {
     display: none;
     flex-direction: column;
     background-color: #ffffff;
     position: fixed;
-    top: 70px; /* Altura aproximada de tu header */
+    top: 70px;
     left: 0;
     width: 100%;
     padding: 1rem;
@@ -331,4 +328,3 @@ footer {
     font-size: 1rem;
   }
 }
-
