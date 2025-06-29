@@ -31,18 +31,24 @@
   <h1>Contáctanos</h1>
   <p>Estamos listos para ayudarte. Por favor llena el formulario o contáctanos directamente por WhatsApp.</p>
 
-  <form action="mailto:info@gts.com.gt" method="post" enctype="text/plain" class="contacto-form">
-    <div class="campo">
-      <input type="text" name="Nombre" placeholder="Tu Nombre" required>
-    </div>
-    <div class="campo">
-      <input type="email" name="Email" placeholder="Tu Email" required>
-    </div>
-    <div class="campo">
-      <textarea name="Mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-    </div>
-    <button type="submit">Enviar Mensaje</button>
-  </form>
+<form action="https://formsubmit.co/info@gts.com.gt" method="POST" class="contacto-form">
+  
+  <!-- Campos ocultos -->
+  <input type="hidden" name="_next" value="https://gtsgt.github.io/gts/gracias.html">
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Campos visibles -->
+  <div class="campo">
+    <input type="text" name="Nombre" placeholder="Tu Nombre" required>
+  </div>
+  <div class="campo">
+    <input type="email" name="Email" placeholder="Tu Email" required>
+  </div>
+  <div class="campo">
+    <textarea name="Mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+  </div>
+  <button type="submit">Enviar Mensaje</button>
+</form>
 
   <div class="contacto-whatsapp">
     <a href="https://wa.me/50259613047" target="_blank">💬 Contactar por WhatsApp</a>
