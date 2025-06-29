@@ -418,22 +418,29 @@ footer {
 .gracias-container {
   max-width: 600px;
   margin: 140px auto 3rem auto;
-  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.gracias-card {
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
   padding: 2.5rem 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.4);
   text-align: center;
+  width: 100%;
 }
 
-.gracias-container h1 {
+.gracias-card h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #cda661;
 }
 
-.gracias-container p {
+.gracias-card p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   color: #ddd;
@@ -453,6 +460,7 @@ footer {
 .btn-regresar:hover {
   background-color: #e0b977;
 }
+
 /* Menú responsive */
 @media screen and (max-width: 768px) {
   nav {
