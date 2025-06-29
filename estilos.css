@@ -323,45 +323,27 @@ footer {
   transform: scale(1.03);
 }
 /* Formulario de contacto */
-.contacto-container {
-  max-width: 600px;
-  margin: 140px auto 2rem auto;
-  padding: 2rem;
-  background: rgba(255,255,255,0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  color: #112331;
-}
-
-.contacto-container h1 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.contacto-container p {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.contacto-container form {
+form {
   display: flex;
   flex-direction: column;
+  max-width: 600px;
+  margin: 2rem auto;
 }
 
-.contacto-container label {
+form label {
   margin: 0.5rem 0 0.2rem;
   font-weight: 600;
 }
 
-.contacto-container input,
-.contacto-container textarea {
+form input,
+form textarea {
   padding: 0.7rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
 }
 
-.contacto-container button {
+form button {
   margin-top: 1rem;
   padding: 0.9rem;
   background: #cda661;
@@ -373,27 +355,8 @@ footer {
   transition: background 0.3s;
 }
 
-.contacto-container button:hover {
+form button:hover {
   background: #e0b977;
-}
-
-.contacto-whatsapp {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.contacto-whatsapp a {
-  background-color: #25D366;
-  color: white;
-  padding: 0.9rem 1.8rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.contacto-whatsapp a:hover {
-  background-color: #1ebd5d;
 }
 /* Página de Gracias */
 .gracias-container {
