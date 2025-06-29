@@ -413,6 +413,46 @@ footer {
 .contacto-whatsapp a:hover {
   background-color: #1ebd5d;
 }
+
+/* Página de Gracias */
+.gracias-container {
+  max-width: 600px;
+  margin: 140px auto 3rem auto;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.gracias-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #cda661;
+}
+
+.gracias-container p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.btn-regresar {
+  display: inline-block;
+  background-color: #cda661;
+  color: #112331;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-regresar:hover {
+  background-color: #e0b977;
+}
 /* Menú responsive */
 @media screen and (max-width: 768px) {
   nav {
