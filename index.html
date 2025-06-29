@@ -47,8 +47,8 @@
       <div class="swiper producto-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="img/catalogo/computadoras1.jpg" alt="Computadoras"></div>
-          <div class="swiper-slide"><img src="img/catalogo/computadoras2.jpg" alt="Computadoras"></div>
-          <div class="swiper-slide"><img src="img/catalogo/computadoras3.jpg" alt="Computadoras"></div>
+          <div class="swiper-slide"><img src="img/catalogo/computadora2.jpg" alt="Computadoras"></div>
+          <div class="swiper-slide"><img src="img/catalogo/computadora3.jpg" alt="Computadoras"></div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -205,10 +205,15 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script>
+<!-- Swiper JS Catalogo General auto 3seg -->
+  <script>
   document.querySelectorAll('.producto-swiper').forEach(function(container){
     new Swiper(container, {
       loop: true,
+      autoplay: {
+        delay: 3000,  // 3 segundos
+        disableOnInteraction: false,  // sigue moviéndose aunque el usuario interactúe
+      },
       navigation: {
         nextEl: container.querySelector('.swiper-button-next'),
         prevEl: container.querySelector('.swiper-button-prev'),
