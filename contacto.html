@@ -55,37 +55,28 @@
   </header>
 
   <!-- Sección Contacto -->
-  <main>
+<main class="contacto-container">
   <h1>Contáctanos</h1>
   <p>Estamos listos para ayudarte. Por favor llena el formulario o contáctanos directamente por WhatsApp.</p>
 
-<form action="https://formspree.io/f/mqabnkdp" method="POST">
-  <!-- Campos ocultos --> 
-  <input type="hidden" name="_redirect" value="https://www.gts.com.gt/gracias.html">
+  <form action="https://formspree.io/f/mqabnkdp" method="POST" class="contacto-form">
+    <!-- Campos ocultos -->
+    <input type="hidden" name="_redirect" value="https://www.gts.com.gt/gracias.html">
 
-  <!-- Campos visibles -->
-  <label for="nombre">Nombre</label>
-  <input type="text" id="nombre" name="nombre" required />
-
-  <label for="email">Correo electrónico</label>
-  <input type="email" id="email" name="email" required />
-
-  <label for="telefono">Teléfono</label>
-  <input 
-    type="tel" 
-    id="telefono" 
-    name="telefono" 
-    pattern="\+502[0-9]{8}" 
-    placeholder="+50212345678"
-    required 
-    title="Debe comenzar con +502 y tener 8 dígitos después de +502" 
-  />
-  
-  <label for="mensaje">Mensaje</label>
-  <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-  <button type="submit">Enviar mensaje</button>
-</form>
+    <div class="campo">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+    </div>
+    <div class="campo">
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+    </div>
+    <div class="campo">
+      <input type="tel" name="telefono" placeholder="+50212345678" pattern="\+502[0-9]{8}" required title="Debe comenzar con +502 y tener 8 dígitos después">
+    </div>
+    <div class="campo">
+      <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+    </div>
+    <button type="submit">Enviar mensaje</button>
+  </form>
 
   <div class="contacto-whatsapp">
     <a href="https://wa.me/50259613047" target="_blank">💬 Contactar por WhatsApp</a>
