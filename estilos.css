@@ -517,84 +517,80 @@ footer {
 body {
   padding-top: 50px; /* Ajusta si tu header es más alto */
 }
-/* Tarjetas Flip (Portafolio) Mejoradas */
+/* Tarjetas Flip (Portafolio) */
 .portafolio {
-  perspective: 1200px;
-  cursor: pointer;
+  perspective: 1000px;
+  min-height: 320px; /* IMPORTANTE: altura mínima */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, border 0.3s ease;
 }
 .portafolio:hover {
-  transform: translateY(-4px);
+  border: 2px solid #cda661;
+  transform: translateY(-5px);
 }
-.portafolio .flip-inner {
+.flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.9s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.8s ease;
   transform-style: preserve-3d;
 }
 .portafolio.active .flip-inner {
   transform: rotateY(180deg);
 }
-.portafolio .flip-front,
-.portafolio .flip-back {
+.flip-front, .flip-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+.flip-front {
+  background: rgba(28,46,63,0.9);
+  display: flex;
+  flex-direction: column;
+}
+.flip-back {
+  background: rgba(28,46,63,0.95);
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
-.portafolio .flip-front {
-  background-color: rgba(28,46,63,0.9);
-}
-.portafolio .flip-front img {
+.flip-front img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-.portafolio .flip-front:hover img {
+.flip-front:hover img {
   transform: scale(1.05);
 }
-.portafolio .flip-back {
-  background-color: rgba(28,46,63,0.95);
-  color: #fff;
-  transform: rotateY(180deg);
+.producto-info {
   padding: 1rem;
   text-align: center;
 }
-.portafolio .producto-info {
-  padding: 1rem;
-  text-align: center;
-}
-.portafolio .producto-info h3 {
+.producto-info h3 {
   color: #cda661;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-.portafolio .producto-info p {
+.producto-info p {
   font-size: 0.95rem;
   color: #ccc;
 }
-.portafolio .flip-back h3 {
+.flip-back h3 {
   color: #cda661;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
-.portafolio .flip-back p {
+.flip-back p {
   font-size: 0.95rem;
   color: #ddd;
-}
-@media screen and (max-width: 768px) {
-  .portafolio .flip-front img {
-    height: 160px;
-  }
-  .portafolio .producto-info h3 {
-    font-size: 1.1rem;
-  }
 }
