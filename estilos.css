@@ -517,80 +517,68 @@ footer {
 body {
   padding-top: 50px; /* Ajusta si tu header es más alto */
 }
-/* Tarjetas Flip (Portafolio) */
+/* Tarjetas Flip */
 .portafolio {
   perspective: 1000px;
-  min-height: 320px; /* IMPORTANTE: altura mínima */
+  min-height: 300px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, border 0.3s ease;
-}
-.portafolio:hover {
-  border: 2px solid #cda661;
-  transform: translateY(-5px);
-}
-.flip-inner {
   position: relative;
+  cursor: pointer;
+}
+.portafolio .flip-inner {
   width: 100%;
   height: 100%;
   transition: transform 0.8s ease;
   transform-style: preserve-3d;
+  position: relative;
 }
 .portafolio.active .flip-inner {
   transform: rotateY(180deg);
 }
-.flip-front, .flip-back {
+.portafolio .flip-front,
+.portafolio .flip-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 12px;
-  overflow: hidden;
+  top: 0;
+  left: 0;
 }
-.flip-front {
-  background: rgba(28,46,63,0.9);
+.portafolio .flip-front {
+  background-color: rgba(28,46,63,0.9);
   display: flex;
   flex-direction: column;
 }
-.flip-back {
-  background: rgba(28,46,63,0.95);
+.portafolio .flip-back {
+  background-color: rgba(28,46,63,0.95);
   color: #fff;
   transform: rotateY(180deg);
-  padding: 1rem;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 1rem;
 }
-.flip-front img {
+.portafolio .flip-front img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
-.flip-front:hover img {
-  transform: scale(1.05);
-}
-.producto-info {
+.portafolio .producto-info {
   padding: 1rem;
   text-align: center;
 }
-.producto-info h3 {
+.portafolio .producto-info h3 {
   color: #cda661;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-.producto-info p {
+.portafolio .producto-info p {
   font-size: 0.95rem;
   color: #ccc;
 }
-.flip-back h3 {
+.portafolio .flip-back h3 {
   color: #cda661;
-  font-size: 1.3rem;
   margin-bottom: 0.5rem;
-}
-.flip-back p {
-  font-size: 0.95rem;
-  color: #ddd;
 }
