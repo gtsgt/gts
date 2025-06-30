@@ -797,16 +797,6 @@
     const menu = document.getElementById("nav-menu");
     menu.classList.toggle("active");
   }
-
-  // Filtro dropdown
-  document.getElementById("categoria-select").addEventListener("change", function() {
-    const valor = this.value;
-    document.querySelectorAll(".portafolio").forEach(card => {
-      card.style.display = !valor || card.dataset.categoria === valor ? "block" : "none";
-    });
-  });
-</script>
-
 <script>
   const tarjetas = document.querySelectorAll('.portafolio');
 
