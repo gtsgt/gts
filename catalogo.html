@@ -819,5 +819,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+  <script>
+  // Añade automáticamente el botón a todas las caras traseras
+  document.querySelectorAll('.portafolio .flip-back').forEach(back => {
+    const btn = document.createElement('a');
+    btn.href = 'contacto.html';
+    btn.className = 'btn-cotizacion';
+    btn.textContent = 'Hablar con un Asesor';
+    back.appendChild(btn);
+  });
+</script>
 </body>
 </html>
