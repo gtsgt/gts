@@ -459,7 +459,19 @@ footer {
 .btn-regresar:hover {
   background-color: #e0b977;
 }
+/* Footer fijo abajo de las paginas */
+html, body {
+  height: 100%;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
 /* Menú responsive */
 @media screen and (max-width: 768px) {
   nav {
