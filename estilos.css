@@ -634,3 +634,18 @@ body {
     font-size: 1.1rem;
   }
 }
+.btn-cotizacion {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #cda661;
+  color: #112331;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn-cotizacion:hover {
+  background: #e0b977;
+}
