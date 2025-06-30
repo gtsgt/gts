@@ -505,3 +505,6 @@ footer {
     padding: 0.7rem 1.2rem;
   }
 }
+body {
+  padding-top: 100px; /* Ajusta si tu header es más alto */
+}
