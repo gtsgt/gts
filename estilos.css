@@ -498,7 +498,7 @@ footer {
 /* Hero responsive */
 @media screen and (max-width: 768px) {
   .hero {
-    height: 30vh; /* Compacto */
+    height: 40vh; /* Compacto */
     margin: 0.5rem;
     border-radius: 16px;
     padding: 1rem;
@@ -514,5 +514,5 @@ footer {
   }
 }
 body {
-  padding-top: 100px; /* Ajusta si tu header es más alto */
+  padding-top: 50px; /* Ajusta si tu header es más alto */
 }
