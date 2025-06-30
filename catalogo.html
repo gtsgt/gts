@@ -798,11 +798,14 @@
     menu.classList.toggle("active");
   }
 </script>
+  <script>
+  // Seleccionar todas las tarjetas
   const tarjetas = document.querySelectorAll('.portafolio');
 
   tarjetas.forEach(tarjeta => {
     tarjeta.addEventListener('click', e => {
-      e.stopPropagation(); // Evita que el clic se propague al body
+      e.stopPropagation();
+      // Toggle clase active
       if (tarjeta.classList.contains('active')) {
         tarjeta.classList.remove('active');
       } else {
@@ -812,7 +815,7 @@
     });
   });
 
-  // Cerrar todas al hacer clic fuera
+  // Cerrar si clic fuera
   document.body.addEventListener('click', () => {
     tarjetas.forEach(t => t.classList.remove('active'));
   });
