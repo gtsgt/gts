@@ -35,6 +35,7 @@
   gtag('config', 'G-J177G2ZCZH');
 </script>
 </head>
+
 <body>
   <!-- Header -->
   <header>
@@ -59,24 +60,21 @@
   <h1>Contáctanos</h1>
   <p>Estamos listos para ayudarte. Por favor llena el formulario o contáctanos directamente por WhatsApp.</p>
 
-  <form action="https://formspree.io/f/mqabnkdp" method="POST" class="contacto-form">
-    <!-- Campos ocultos -->
-    <input type="hidden" name="_redirect" value="https://www.gts.com.gt/gracias.html">
-
-    <div class="campo">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-    </div>
-    <div class="campo">
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-    </div>
-    <div class="campo">
-      <input type="tel" name="telefono" placeholder="+50212345678" pattern="\+502[0-9]{8}" required title="Debe comenzar con +502 y tener 8 dígitos después">
-    </div>
-    <div class="campo">
-      <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
-    </div>
-    <button type="submit">Enviar mensaje</button>
-  </form>
+<form id="contact-form" class="contacto-form">
+  <div class="campo">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+  </div>
+  <div class="campo">
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+  </div>
+  <div class="campo">
+    <input type="tel" name="telefono" placeholder="+50212345678" pattern="\+502[0-9]{8}" required title="Debe comenzar con +502 y tener 8 dígitos después">
+  </div>
+  <div class="campo">
+    <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+  </div>
+  <button type="submit">Enviar mensaje</button>
+</form>
 
   <div class="contacto-whatsapp">
     <a href="https://wa.me/50259613047" target="_blank">💬 Contactar por WhatsApp</a>
@@ -120,5 +118,30 @@
   <a href="https://wa.me/50259613047" class="whatsapp-float" target="_blank" title="¿Necesitas ayuda? Chatea con nosotros">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
   </a>
+    <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("4dPkgu1ZnQuBqkSNT"); // Reemplaza con tu Public Key
+  })();
+</script>
+  <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("4dPkgu1ZnQuBqkSNT"); // Tu Public Key de EmailJS
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_r21hn0k', 'template_kh2mdzp', this)
+      .then(function() {
+        // Redirige al agradecer
+        window.location.href = 'gracias.html';
+      }, function(error) {
+        alert('Ocurrió un error al enviar tu mensaje. Por favor intenta de nuevo.\n' + JSON.stringify(error));
+      });
+  });
+</script>
 </body>
 </html>
