@@ -486,3 +486,20 @@ footer {
     font-size: 1rem;
   }
 }
+  /* Hero responsive */
+  .hero {
+    height: 40vh; /* o 30vh si lo quieres más compacto */
+    margin: 0.5rem;
+    border-radius: 16px;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn-cta {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
