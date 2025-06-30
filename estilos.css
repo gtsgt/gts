@@ -459,17 +459,13 @@ footer {
 .btn-regresar:hover {
   background-color: #e0b977;
 }
-/* Footer fijo abajo de las paginas */
-html, body {
-  height: 100%;
-}
-
-body {
+.gracias-page {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-main {
+.gracias-page main {
   flex: 1;
 }
 /* Menú responsive */
