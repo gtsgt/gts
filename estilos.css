@@ -488,7 +488,7 @@ footer {
 }
   /* Hero responsive */
   .hero {
-    height: 40vh; /* o 30vh si lo quieres más compacto */
+    height: 30vh; /* o 30vh si lo quieres más compacto */
     margin: 0.5rem;
     border-radius: 16px;
     padding: 1rem;
