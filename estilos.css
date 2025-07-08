@@ -649,6 +649,34 @@ body {
 .btn-cotizacion:hover {
   background: #e0b977;
 }
+/* Estilo para el botón de descarga PDF */
+.pdf-button-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.pdf-button {
+    background-color: #074470;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+    background-color: #112331;
+}
+
+.pdf-button i {
+    font-size: 20px;
+}
 /* Slider de Novedades */
 .novedades-slider {
   position: relative;
