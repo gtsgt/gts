@@ -764,7 +764,44 @@
       </div>
     </section>
   </main>
+<!-- Sección de Botón de Descarga PDF -->
+<div class="pdf-button-container" style="text-align: center; margin: 20px;">
+    <a href="catalogo.pdf" class="pdf-button" download>
+        <i class="fas fa-file-pdf"></i> Descargar Catálogo PDF
+    </a>
+</div>
 
+<!-- Estilo para el botón -->
+<style>
+    .pdf-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pdf-button {
+        background-color: #074470;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+    }
+
+    .pdf-button:hover {
+        background-color: #112331;
+    }
+
+    .pdf-button i {
+        font-size: 20px;
+    }
+</style>
   <!-- Footer -->
   <footer>
     <div class="footer-content">
