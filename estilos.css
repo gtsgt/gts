@@ -660,6 +660,9 @@ body {
     cursor: pointer;
     font-weight: bold;
     border: none;
+    display: block;
+    margin: 20px auto; /* Centra el botón y le da separación */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
 /* Estilo de la ventana flotante (Modal) */
@@ -671,49 +674,71 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente */
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
+/* Estilo del contenido dentro del modal */
 .modal-content {
-    background-color: white;
-    padding: 20px;
+    background-color: #fff;
+    padding: 30px;
     border-radius: 8px;
     width: 400px;
     text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más suave para el cuadro */
 }
 
+/* Título del modal */
 .modal-header {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: #074470; /* Título en el azul de GTS */
 }
 
+/* Estilo de los botones dentro del modal */
 .modal-button {
     background-color: #074470;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
     display: inline-block;
     margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
 }
 
 .modal-button:hover {
-    background-color: #112331;
+    background-color: #112331; /* Color más oscuro en hover */
 }
 
-/* Estilo para el botón de cierre */
+/* Estilo para el botón de cerrar */
 .close-btn {
-    background-color: red;
+    background-color: #f44336; /* Rojo para llamar la atención */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f; /* Rojo más oscuro en hover */
+}
+
+/* Ajuste para el footer */
+footer {
+    margin-top: 50px; /* Separación entre el contenido y el footer */
 }
 /* Slider de Novedades */
 .novedades-slider {
