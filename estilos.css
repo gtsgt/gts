@@ -654,15 +654,20 @@ body {
     background-color: #074470;
     color: white;
     font-size: 16px;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 14px 30px;
+    border-radius: 30px; /* Bordes redondeados para un diseño moderno */
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
     border: none;
     display: block;
-    margin: 20px auto; /* Centra el botón y le da separación */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin: 20px auto; /* Centra el botón */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #112331; /* Efecto hover */
 }
 
 /* Estilo de la ventana flotante (Modal) */
@@ -674,66 +679,70 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro translúcido */
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-/* Estilo del contenido dentro del modal */
+/* Contenido del modal */
 .modal-content {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    width: 400px;
+    background-color: #1a1a1a; /* Fondo oscuro para el modal */
+    padding: 40px;
+    border-radius: 15px; /* Bordes redondeados */
+    width: 450px;
     text-align: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más suave para el cuadro */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    color: white;
 }
 
 /* Título del modal */
 .modal-header {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 20px;
-    color: #074470; /* Título en el azul de GTS */
+    color: #074470; /* Título en el color de GTS */
+    font-weight: bold;
 }
 
 /* Estilo de los botones dentro del modal */
 .modal-button {
     background-color: #074470;
     color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 12px 25px;
+    border-radius: 25px; /* Bordes más redondeados */
     text-decoration: none;
     font-size: 16px;
     display: inline-block;
-    margin: 10px 0;
+    margin: 15px 0;
     width: 100%;
     box-sizing: border-box;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .modal-button:hover {
-    background-color: #112331; /* Color más oscuro en hover */
+    background-color: #112331; /* Hover con el color más oscuro */
+    transform: scale(1.05); /* Efecto de agrandado en el hover */
 }
 
 /* Estilo para el botón de cerrar */
 .close-btn {
-    background-color: #f44336; /* Rojo para llamar la atención */
+    background-color: #f44336; /* Rojo brillante */
     color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 12px 25px;
+    border-radius: 25px;
     text-decoration: none;
     font-size: 16px;
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 20px;
     width: 100%;
     box-sizing: border-box;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .close-btn:hover {
-    background-color: #d32f2f; /* Rojo más oscuro en hover */
+    background-color: #d32f2f; /* Hover con rojo más oscuro */
+    transform: scale(1.05); /* Efecto de agrandado en el hover */
 }
 
 /* Ajuste para el footer */
